@@ -1,2 +1,2 @@
-# Notes (this session) 
-- Add modules for Routing by routing plugin
+# Notes (this session)
+- Learning loggin request from postman

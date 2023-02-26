@@ -10,13 +10,7 @@ import io.ktor.server.routing.*
 fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
         configureRouting()
-        contactUsModule()
     }.start(wait = true)
-}
-fun Routing.myRouting() {
-        get("/") {
-            call.respond("Hello from myRouting")
-        }
 }
 fun Application.module() {
 //    val port = environment.config.propertyOrNull("ktor.deplyoment.port")?.getString() ?: "8080"
