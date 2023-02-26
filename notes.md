@@ -1,2 +1,2 @@
 # Notes (this session)
-- Learning loggin request from postman
+- Learning logging url parameter from postman
