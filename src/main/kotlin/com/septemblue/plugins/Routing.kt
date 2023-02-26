@@ -17,5 +17,23 @@ fun Application.configureRouting() {
 
             call.respond("Hello ktor")
         }
+        get("/book/{page}") {
+            val page = call.parameters["page"]
+
+            call.respondText { "You are on page : $page" }
+        }
+        get("/login") {
+
+            // Receive body, but we need class that resemble the structure of the json
+            val userInfo = call.receive<UserInfo>()
+            println("User info : ${userInfo}")
+            call.respondText("You are on login page")
+        }
     }
 }
+
+@kotlinx.serialization.Serializable
+data class UserInfo(
+    val email: String,
+    val password: String,
+)
