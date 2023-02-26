@@ -9,9 +9,8 @@ import io.ktor.server.routing.*
 
 fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
-        install(Routing) {
-            myRouting()
-        }
+        configureRouting()
+        contactUsModule()
     }.start(wait = true)
 }
 fun Routing.myRouting() {
